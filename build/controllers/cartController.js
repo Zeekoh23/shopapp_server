@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteCart = exports.UpdateCart = exports.CreateCart = exports.GetCart = exports.GetAllCarts = void 0;
+const cartModel_1 = require("../models/cartModel");
+const HandlerFactory_1 = require("../utils/HandlerFactory");
+exports.GetAllCarts = (0, HandlerFactory_1.getAll)(cartModel_1.Cart);
+exports.GetCart = (0, HandlerFactory_1.getOne)(cartModel_1.Cart, {});
+exports.CreateCart = (0, HandlerFactory_1.createOne)(cartModel_1.Cart);
+exports.UpdateCart = (0, HandlerFactory_1.updateOne)(cartModel_1.Cart);
+exports.DeleteCart = (0, HandlerFactory_1.deleteOne)(cartModel_1.Cart);
